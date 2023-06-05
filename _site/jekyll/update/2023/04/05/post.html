@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Github page 블로그 커스터마이징 (w/Jekyll theme) | SP</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Github page 블로그 커스터마이징 (w/Jekyll theme)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Github page를 만들고 조금씩 고쳐나가고 있다. 처음 눈에 들어온건 minima 테마에서 상단에 보이는 디폴트 회색라인을 삭제하고 싶었다. jekyll 구조가 처음이어서 좀 헤매다가 방법을 찾았다. Jekyll은 정적 웹사이트 생성기이다(루비로 만든 프레임워크) Github을 활용하여 사이트를 운영할 수 있다. Jekyll 공식 사이트에 설명이 잘 나와 있어서 천천히 읽어보면 좋을 것 같다." />
+<meta property="og:description" content="Github page를 만들고 조금씩 고쳐나가고 있다. 처음 눈에 들어온건 minima 테마에서 상단에 보이는 디폴트 회색라인을 삭제하고 싶었다. jekyll 구조가 처음이어서 좀 헤매다가 방법을 찾았다. Jekyll은 정적 웹사이트 생성기이다(루비로 만든 프레임워크) Github을 활용하여 사이트를 운영할 수 있다. Jekyll 공식 사이트에 설명이 잘 나와 있어서 천천히 읽어보면 좋을 것 같다." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2023/04/05/post.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2023/04/05/post.html" />
+<meta property="og:site_name" content="SP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-05T14:11:30+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Github page 블로그 커스터마이징 (w/Jekyll theme)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-05T14:11:30+09:00","datePublished":"2023-04-05T14:11:30+09:00","description":"Github page를 만들고 조금씩 고쳐나가고 있다. 처음 눈에 들어온건 minima 테마에서 상단에 보이는 디폴트 회색라인을 삭제하고 싶었다. jekyll 구조가 처음이어서 좀 헤매다가 방법을 찾았다. Jekyll은 정적 웹사이트 생성기이다(루비로 만든 프레임워크) Github을 활용하여 사이트를 운영할 수 있다. Jekyll 공식 사이트에 설명이 잘 나와 있어서 천천히 읽어보면 좋을 것 같다.","headline":"Github page 블로그 커스터마이징 (w/Jekyll theme)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2023/04/05/post.html"},"url":"http://localhost:4000/jekyll/update/2023/04/05/post.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="SP" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">SP</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Github page 블로그 커스터마이징 (w/Jekyll theme)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-04-05T14:11:30+09:00" itemprop="datePublished">Apr 5, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Github page를 만들고 조금씩 고쳐나가고 있다. 처음 눈에 들어온건 minima 테마에서 상단에 보이는 디폴트 회색라인을 삭제하고 싶었다. jekyll 구조가 처음이어서 좀 헤매다가 방법을 찾았다. 
+<br /><br />
+Jekyll은 정적 웹사이트 생성기이다(루비로 만든 프레임워크) Github을 활용하여 사이트를 운영할 수 있다.
+Jekyll 공식 사이트에 설명이 잘 나와 있어서 천천히 읽어보면 좋을 것 같다.</p>
+
+<ul>
+  <li>CSS를 변경하고 싶다면, Jekyll theme 구조를 파악해야 한다. 구조 파악 후 수정이 필요한 파일을 찾아야 한다.</li>
+  <li>수정해야 할 파일을 찾았으면 로컬 파일로 덮어쓰기 하면 된다.(처음엔 이게 무슨 말인가 했네) &gt; <a href="https://jekyllrb-ko.github.io/docs/themes/"> jekyll 구조 파악하기 </a></li>
+  <li>Jekyll 과 Ruby, bundler, gem 조금 더 알아볼 필요가 있을 것 같다.</li>
+</ul>
+
+<p>** NEXT TO DO</p>
+<ol>
+  <li>메뉴 카테고리 추가하기</li>
+  <li>Github admin 페이지 metadata field 익히기</li>
+  <li>Github admin 필요한 것들 추가해보고 싶다. admin 페이지 post 기능 잘 활용하기</li>
+  <li>Github 사용방법 조금씩 연습하자</li>
+  <li>SCSS 과 SASS 내용도 한번 찾아보자(로컬 서버 deprecated 오류 관련)</li>
+</ol>
+
+  </div><a class="u-url" href="/jekyll/update/2023/04/05/post.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">SP</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">-->
+              <!-- SP --></li><li><a class="u-email" href="mailto:oe3d9b@gmail.com">oe3d9b@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>SeokPyo-Hong is graphic designer based in seoul. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
