@@ -1,7 +1,7 @@
-title: Your awesome title
+title: Hong Seok Pyo
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Hong Seok Pyo
+  email: seokpyo1110@gmail.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
@@ -17,10 +17,12 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-admin
 
 # Theme-specific settings
 
 minima:
+  skin: dark
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
   #
@@ -54,3 +56,7 @@ minima:
 # Set to `true` to show excerpts on the homepage.
 #
 # show_excerpts: false
+
+jekyll_admin:
+  hidden_links:
+  homepage: ""

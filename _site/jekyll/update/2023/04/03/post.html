@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MDN으로 자바스크립트 공부하기 | Hong Seok Pyo</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="MDN으로 자바스크립트 공부하기" />
+<meta name="author" content="Hong Seok Pyo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="오늘은 MDN Docs 중 javascript tutorial의 목차를 복습 겸 적어두려고 한다. (조금이라도 꾸준하게 적어둬야지) ‘새로운 질서’ 수업 이후에 자바스크립트를 조금씩 공부했는데, 튜토리얼을 찾다가 MDN tutorial이 있어, 약 3달간 javascript beginners 파트부터 순서대로 읽고, 제시된 모든 예제를 풀었다. 처음 공부하는 부분이 많아서 어려운 부분이 있었지만 너무 좋은 자료인 것 같다.(다만 한국어 지원은 조금 부족한 듯 하다) 목차에 내용이 잘 포함되어 있어서, 복습 시에 참고하면 될 것 같다. 추후에 MDN 문서 관련해서 전체 내용을 정리해보면 좋을 것 같다는 생각이 든다. 큰 단원별로 Test your skill과 미니 프로젝트(목차에 ** 표시)가 있어서 실습해보면서 개념을 공부할 수 있다." />
+<meta property="og:description" content="오늘은 MDN Docs 중 javascript tutorial의 목차를 복습 겸 적어두려고 한다. (조금이라도 꾸준하게 적어둬야지) ‘새로운 질서’ 수업 이후에 자바스크립트를 조금씩 공부했는데, 튜토리얼을 찾다가 MDN tutorial이 있어, 약 3달간 javascript beginners 파트부터 순서대로 읽고, 제시된 모든 예제를 풀었다. 처음 공부하는 부분이 많아서 어려운 부분이 있었지만 너무 좋은 자료인 것 같다.(다만 한국어 지원은 조금 부족한 듯 하다) 목차에 내용이 잘 포함되어 있어서, 복습 시에 참고하면 될 것 같다. 추후에 MDN 문서 관련해서 전체 내용을 정리해보면 좋을 것 같다는 생각이 든다. 큰 단원별로 Test your skill과 미니 프로젝트(목차에 ** 표시)가 있어서 실습해보면서 개념을 공부할 수 있다." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2023/04/03/post.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2023/04/03/post.html" />
+<meta property="og:site_name" content="Hong Seok Pyo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-03T13:40:49+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MDN으로 자바스크립트 공부하기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hong Seok Pyo"},"dateModified":"2023-04-03T13:40:49+09:00","datePublished":"2023-04-03T13:40:49+09:00","description":"오늘은 MDN Docs 중 javascript tutorial의 목차를 복습 겸 적어두려고 한다. (조금이라도 꾸준하게 적어둬야지) ‘새로운 질서’ 수업 이후에 자바스크립트를 조금씩 공부했는데, 튜토리얼을 찾다가 MDN tutorial이 있어, 약 3달간 javascript beginners 파트부터 순서대로 읽고, 제시된 모든 예제를 풀었다. 처음 공부하는 부분이 많아서 어려운 부분이 있었지만 너무 좋은 자료인 것 같다.(다만 한국어 지원은 조금 부족한 듯 하다) 목차에 내용이 잘 포함되어 있어서, 복습 시에 참고하면 될 것 같다. 추후에 MDN 문서 관련해서 전체 내용을 정리해보면 좋을 것 같다는 생각이 든다. 큰 단원별로 Test your skill과 미니 프로젝트(목차에 ** 표시)가 있어서 실습해보면서 개념을 공부할 수 있다.","headline":"MDN으로 자바스크립트 공부하기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2023/04/03/post.html"},"url":"http://localhost:4000/jekyll/update/2023/04/03/post.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hong Seok Pyo" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Hong Seok Pyo</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">MDN으로 자바스크립트 공부하기</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-04-03T13:40:49+09:00" itemprop="datePublished">
+        Apr 3, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>오늘은 MDN Docs 중 javascript tutorial의 목차를 복습 겸 적어두려고 한다. (조금이라도 꾸준하게 적어둬야지)
+‘새로운 질서’ 수업 이후에 자바스크립트를 조금씩 공부했는데, 튜토리얼을 찾다가 MDN tutorial이 있어, 약 3달간 javascript beginners 파트부터 순서대로 읽고, 제시된 모든 예제를 풀었다. 처음 공부하는 부분이 많아서 어려운 부분이 있었지만 너무 좋은 자료인 것 같다.(다만 한국어 지원은 조금 부족한 듯 하다) 목차에 내용이 잘 포함되어 있어서, 복습 시에 참고하면 될 것 같다. 추후에 MDN 문서 관련해서 전체 내용을 정리해보면 좋을 것 같다는 생각이 든다. 큰 단원별로 Test your skill과 미니 프로젝트(목차에 ** 표시)가 있어서 실습해보면서 개념을 공부할 수 있다.</p>
+
+<p><br /></p>
+
+<p><strong>Mozilla tutorial javascript INDEX</strong></p>
+
+<details>
+<summary><b>1. JavaScript First Steps</b></summary>
+&nbsp;&nbsp;<details><summary>What is JavaScript?</summary>
+&nbsp;&nbsp;* A high level definition <br />
+&nbsp;&nbsp;* So what can it really do? <br />
+&nbsp;&nbsp;* What is JavaScript doing on your page? <br />
+&nbsp;&nbsp;* How do you add JavaScript to your page? <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>A first into JavaScript</summary>
+&nbsp;&nbsp;* Thinking like a programmer <br />
+&nbsp;&nbsp;* Example - Guess the number game <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>What went wrong? Trouble shooting JavaScript</summary>
+&nbsp;&nbsp;* Types of error <br />
+&nbsp;&nbsp;* An erroneous example <br />
+&nbsp;&nbsp;* Fixing syntax errors <br />
+&nbsp;&nbsp;* A logic error <br />
+&nbsp;&nbsp;* other common errors <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Storing the information you need - Variables</summary>
+&nbsp;&nbsp;* What is a variable? <br />
+&nbsp;&nbsp;* Declaring a variable <br />
+&nbsp;&nbsp;* Initializing a variable <br />
+&nbsp;&nbsp;* A note about varible <br />
+&nbsp;&nbsp;* Updating a variable <br />
+&nbsp;&nbsp;* Variable types <br />
+&nbsp;&nbsp;* Dynamic typing <br />
+&nbsp;&nbsp;* Constants in JavaScript <br />
+&nbsp;&nbsp;* When to use const and when to use let <br />
+<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Variable 1 <br />
+&nbsp;&nbsp;Variable 2 <br />
+&nbsp;&nbsp;Variable 3
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Basic math in JavaScript - numbers and operators</summary>
+&nbsp;&nbsp;* Everybody loves math <br />
+&nbsp;&nbsp;* Arithmetic operators <br />
+&nbsp;&nbsp;* Increment and decrement operators <br />
+&nbsp;&nbsp;* Assignment operators <br />
+&nbsp;&nbsp;* Active learning : sizing a canvas box <br />
+&nbsp;&nbsp;* Comparison operators <br />
+<details><summary>Test your skills!</summary>
+Math 1 <br />
+Math 2 <br />
+Math 3
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Handling text - Strings in JavaScript</summary>
+&nbsp;&nbsp;* The power of words <br />
+&nbsp;&nbsp;* Strings - the basics <br />
+&nbsp;&nbsp;* Concatenating strings <br />
+&nbsp;&nbsp;* Numbers vs Strings <br />
+&nbsp;&nbsp;* Including expressions in strings <br />
+&nbsp;&nbsp;* Multiline strings <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Useful string methods</summary>
+&nbsp;&nbsp;* Strings as objects <br />
+&nbsp;&nbsp;* Finding the length of a string <br />
+&nbsp;&nbsp;* Retrieving a specific string character <br />
+&nbsp;&nbsp;* Testing if a string contains a substring <br />
+&nbsp;&nbsp;* Finding the position of a substring in a string <br />
+&nbsp;&nbsp;* Extracting a substring from a string <br />
+&nbsp;&nbsp;* Changing case <br />
+&nbsp;&nbsp;* Updating parts of a string <br />
+&nbsp;&nbsp;* Active learning examples <br />
+<details><summary>Test your skills!</summary>
+Strings 1 <br />
+Strings 2 <br />
+Strings 3 <br />
+Strings 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Arrays</summary>
+&nbsp;&nbsp;* What is an array? <br />
+&nbsp;&nbsp;* Creating arrays <br />
+&nbsp;&nbsp;* Finding the length of an array <br />
+&nbsp;&nbsp;* Accessing and modifying array items <br />
+&nbsp;&nbsp;* Finding the index of items in an array <br />
+&nbsp;&nbsp;* Adding items <br />
+&nbsp;&nbsp;* Removing items <br />
+&nbsp;&nbsp;* Accessing every item <br />
+&nbsp;&nbsp;* Converting between strings ans arrays <br />
+&nbsp;&nbsp;* Active learning : Printing those products <br />
+&nbsp;&nbsp;* Active learning : Top 5 searches <br />
+<details><summary>Test your skills!</summary>
+Arrays 1 <br />
+Arrays 2 <br />
+Arrays 3 <br />
+Arrays 4
+</details>
+</details>
+
+
+<br /><b>**Silly story generator</b><br /><br />
+
+
+</details>
+
+<details>
+<summary><b>2. JavaScript building blocks</b></summary>
+&nbsp;&nbsp;<details><summary>Making decisions in your code - conditionals</summary>
+&nbsp;&nbsp;* You can have it on one conditions! <br />
+&nbsp;&nbsp;* If... else statements <br />
+&nbsp;&nbsp;* Switch statements <br />
+&nbsp;&nbsp;* Ternary operator <br />
+&nbsp;&nbsp;* Active learning : A simple calendar <br />
+&nbsp;&nbsp;* Active learning : Move color choices <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Conditionals 1 <br />
+&nbsp;&nbsp;Conditionals 2 <br />
+&nbsp;&nbsp;Conditionals 3 <br />
+&nbsp;&nbsp;Conditionals 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Looping code</summary>
+&nbsp;&nbsp;* Why are loops useful? <br />
+&nbsp;&nbsp;* Looping through a collection <br />
+&nbsp;&nbsp;* The standard for loop <br />
+&nbsp;&nbsp;* Exiting loops with break <br />
+&nbsp;&nbsp;* Skipping iterations with continue <br />
+&nbsp;&nbsp;* While and do ... while <br />
+&nbsp;&nbsp;* Active learning : Launch countdown <br />
+&nbsp;&nbsp;* Active learning : Filling in a guest list <br />
+&nbsp;&nbsp;* Which loop type should you use? <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Loops 1 <br />
+&nbsp;&nbsp;Loops 2 <br />
+&nbsp;&nbsp;Loops 3 
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Functions - reusable blocks of code</summary>
+&nbsp;&nbsp;* Where do i find functions? <br />
+&nbsp;&nbsp;* Built-in browser functions <br />
+&nbsp;&nbsp;* Functions versus methods <br />
+&nbsp;&nbsp;* Invoking functions <br />
+&nbsp;&nbsp;* Function parameters <br />
+&nbsp;&nbsp;* Anonymouus functions and arrow functions <br />
+&nbsp;&nbsp;* Function scope and conflicts <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Functions 1 <br />
+&nbsp;&nbsp;Functions 2 <br />
+&nbsp;&nbsp;Functions 3 <br />
+&nbsp;&nbsp;Functions 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Build your own function</summary>
+&nbsp;&nbsp;* Action learning : Let's build a function <br />
+&nbsp;&nbsp;* The basic function <br />
+&nbsp;&nbsp;* Calling the function <br />
+&nbsp;&nbsp;* Improving the function with parameters <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Functions 1 <br />
+&nbsp;&nbsp;Functions 2 <br />
+&nbsp;&nbsp;Functions 3 <br />
+&nbsp;&nbsp;Functions 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Function return values</summary>
+&nbsp;&nbsp;* What are return values? <br />
+&nbsp;&nbsp;* Active learning : our own return value function <br />
+&nbsp;&nbsp;* Now its your turn! <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Functions 1 <br />
+&nbsp;&nbsp;Functions 2 <br />
+&nbsp;&nbsp;Functions 3 <br />
+&nbsp;&nbsp;Functions 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Introduction to Events!</summary>
+&nbsp;&nbsp;* What is an event?<br />
+&nbsp;&nbsp;* Using addEventListener() <br />
+&nbsp;&nbsp;* Other event listener mechanisms <br />
+&nbsp;&nbsp;* Event objects <br />
+&nbsp;&nbsp;* Preventing defalut behavior <br />
+&nbsp;&nbsp;* Event bubbling <br />
+&nbsp;&nbsp;* Event deligation <br />
+&nbsp;&nbsp;* It is not just web pages <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Events 1 <br />
+&nbsp;&nbsp;Events 2 <br />
+&nbsp;&nbsp;Events 3 
+</details>
+</details>
+
+
+<br /><b>**Image gallery</b><br /><br />
+
+
+</details>
+
+<details>
+<summary><b>3. Introducing javascript objects</b></summary>
+&nbsp;&nbsp;<details><summary>JavaScript object basics</summary>
+&nbsp;&nbsp;* Object basics <br />
+&nbsp;&nbsp;* Dot notation <br />
+&nbsp;&nbsp;* Bracket notation <br />
+&nbsp;&nbsp;* Setting object members <br />
+&nbsp;&nbsp;* What is "this"? <br />
+&nbsp;&nbsp;* Introducing constructors <br />
+&nbsp;&nbsp;* You've been using objects all along <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;Object basics 1 <br />
+&nbsp;&nbsp;Object basics 2 <br />
+&nbsp;&nbsp;Object basics 3 <br />
+&nbsp;&nbsp;Object basics 4
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Object prototypes</summary>
+&nbsp;&nbsp;* The prototype chain <br />
+&nbsp;&nbsp;* Shadowing properties <br />
+&nbsp;&nbsp;* Setting a prototype <br />
+&nbsp;&nbsp;* Prototypes and inheritance <br />
+
+</details>
+
+&nbsp;&nbsp;<details><summary>Object - oriented programming</summary>
+&nbsp;&nbsp;* Classes and instances <br />
+&nbsp;&nbsp;* Inheritance <br />
+&nbsp;&nbsp;* Encapsulation <br />
+&nbsp;&nbsp;* OOP and JavaScript <br />
+
+</details>
+
+&nbsp;&nbsp;<details><summary>Classes in JavaScript</summary>
+&nbsp;&nbsp;* Classes and constructors <br />
+&nbsp;&nbsp;* Inheritance <br />
+&nbsp;&nbsp;* Encapsulation <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;OOJS 1 <br />
+&nbsp;&nbsp;OOJS 2 <br />
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Working with JSON</summary>
+&nbsp;&nbsp;* No, really, what is JSON? <br />
+&nbsp;&nbsp;* Active learning : working through a JSON example <br />
+&nbsp;&nbsp;* Converting between objects ans text <br />
+
+&nbsp;&nbsp;<details><summary>Test your skills!</summary>
+&nbsp;&nbsp;JSON 1
+</details>
+</details>
+
+&nbsp;&nbsp;<details><summary>Object building practice</summary>
+&nbsp;&nbsp;* Modeling a ball in our program<br />
+&nbsp;&nbsp;* Animating the ball <br />
+&nbsp;&nbsp;* Adding collision detection <br />
+
+</details>
+
+<br /><b>**Adding feature to our bouncing balls demo</b><br /><br />
+
+</details>
+
+<details>
+<summary><b>4. Asynchronous Javascript</b></summary>
+&nbsp;&nbsp;<details><summary>Introducing asynchronous Javascript</summary>
+&nbsp;&nbsp;* Synchronous programming <br />
+&nbsp;&nbsp;* Event handlers <br />
+&nbsp;&nbsp;* Callbacks <br />
+
+</details>
+
+&nbsp;&nbsp;<details><summary>How to use prommies</summary>
+&nbsp;&nbsp;* Using the fetch() API <br />
+&nbsp;&nbsp;* Chaining promies <br />
+&nbsp;&nbsp;* Catching errors <br />
+&nbsp;&nbsp;* Promise termminology <br />
+&nbsp;&nbsp;* Combining multiple promises <br />
+&nbsp;&nbsp;* Async and await <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>How to implement a promise-based API</summary>
+&nbsp;&nbsp;* Implementing an alarm() API <br />
+&nbsp;&nbsp;* Other types of workers<br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Introducing workers</summary>
+&nbsp;&nbsp;* Using web workers <br />
+&nbsp;&nbsp;* Inheritance <br />
+&nbsp;&nbsp;* Encapsulation <br />
+</details>
+
+<br /><b>**Sequencing Animation</b><br /><br />
+
+</details>
+
+<details>
+<summary><b>5. Client-side web APIs</b></summary>
+&nbsp;&nbsp;<details><summary>Introduction to web APIs</summary>
+&nbsp;&nbsp;* What are APIs? <br />
+&nbsp;&nbsp;* What can APIs do? <br />
+&nbsp;&nbsp;* How do APIs work? <br />
+
+</details>
+
+&nbsp;&nbsp;<details><summary>Manipulating documents</summary>
+&nbsp;&nbsp;* The important parts of a web browser <br />
+&nbsp;&nbsp;* The document object model <br />
+&nbsp;&nbsp;* Active learning : Basic DOM manipulation <br />
+&nbsp;&nbsp;* Active learning : A dynamic shopping list <br />
+
+</details>
+
+&nbsp;&nbsp;<details><summary>Fetching data from the server</summary>
+&nbsp;&nbsp;* What is the problem here? <br />
+&nbsp;&nbsp;* The Fetch API<br />
+&nbsp;&nbsp;* The XMLHttpRequest API<br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Third-party APIs</summary>
+&nbsp;&nbsp;* What are third party APIs? <br />
+&nbsp;&nbsp;* Extending the Map quest example<br />
+&nbsp;&nbsp;* A RESTful API - NY Times <br />
+&nbsp;&nbsp;* An approach for using third-party APIs <br />
+&nbsp;&nbsp;* YOUTUBE example <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Drawing graphics</summary>
+&nbsp;&nbsp;* Graphics on the web <br />
+&nbsp;&nbsp;* Active learnning : Getting started with a \&lt;Canvas\&gt; <br />
+&nbsp;&nbsp;* 2D canvas basics <br />
+&nbsp;&nbsp;* Loop and animations <br />
+&nbsp;&nbsp;* WebGL <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Video and Audio APIs</summary>
+&nbsp;&nbsp;* HTML video and audio <br />
+&nbsp;&nbsp;* The HTMLMediaElement API <br />
+</details>
+
+&nbsp;&nbsp;<details><summary>Client-side Storage</summary>
+&nbsp;&nbsp;* Client-side storage? <br />
+&nbsp;&nbsp;* Storing simple data - Web storage <br />
+&nbsp;&nbsp;* Storing complex data - Indexed DB <br />
+&nbsp;&nbsp;* Offline asset storage <br />
+</details>
+
+</details>
+
+<p><br />
+<br />
+Next To Do</p>
+<ul>
+<li> Javascript 복습 내용 추가 </li>
+<li> Javascript 스터디 로그 적어두기 </li>
+<li> ::before 의사코드 활용 연습하기</li>
+</ul>
+
+<p><br /><br /></p>
+<hr style="border-width:0.5px" />
+
+<p><br />
+:: 참고  <br />
+<a href="https://developer.mozilla.org/ko/" target="_blank">MDN</a>    <br />
+<a href="https://developer.mozilla.org/en-US/docs/MDN/At_ten/History_of_MDN">History of MDN</a></p>
+
+
+  </div><a class="u-url" href="/jekyll/update/2023/04/03/post.html" hidden></a>
+</article>
+
+      </div>
+    </main>
+
+    <!--<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://localhost:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Hong Seok Pyo</li>
+          <li><a class="u-email" href="mailto:seokpyo1110@gmail.com">seokpyo1110@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+-->
+
+  </body>
+
+</html>
