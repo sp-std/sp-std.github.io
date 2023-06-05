@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Github Page 만들기 (w/jekyll minima) | SP</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Github Page 만들기 (w/jekyll minima)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="앞으로는 잘 기록해두는 것이 좋을 것 같아, 블로그를 시작해보려고 한다. 대표적으로 사용되는 블로그 플랫폼을 찾았고, 그 중 Github Page를 사용해 보기로 했다. 페이지를 직접 만들어볼 수 있어서, 그 과정에서 GitHub도 자연스럽게 공부가 될 것 같다. 오늘 작업한 내용을 살펴 보면," />
+<meta property="og:description" content="앞으로는 잘 기록해두는 것이 좋을 것 같아, 블로그를 시작해보려고 한다. 대표적으로 사용되는 블로그 플랫폼을 찾았고, 그 중 Github Page를 사용해 보기로 했다. 페이지를 직접 만들어볼 수 있어서, 그 과정에서 GitHub도 자연스럽게 공부가 될 것 같다. 오늘 작업한 내용을 살펴 보면," />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2023/03/15/first-post.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2023/03/15/first-post.html" />
+<meta property="og:site_name" content="SP" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-15T13:40:49+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Github Page 만들기 (w/jekyll minima)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-15T13:40:49+09:00","datePublished":"2023-03-15T13:40:49+09:00","description":"앞으로는 잘 기록해두는 것이 좋을 것 같아, 블로그를 시작해보려고 한다. 대표적으로 사용되는 블로그 플랫폼을 찾았고, 그 중 Github Page를 사용해 보기로 했다. 페이지를 직접 만들어볼 수 있어서, 그 과정에서 GitHub도 자연스럽게 공부가 될 것 같다. 오늘 작업한 내용을 살펴 보면,","headline":"Github Page 만들기 (w/jekyll minima)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2023/03/15/first-post.html"},"url":"http://localhost:4000/jekyll/update/2023/03/15/first-post.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="SP" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">SP</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Github Page 만들기 (w/jekyll minima)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-03-15T13:40:49+09:00" itemprop="datePublished">Mar 15, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>앞으로는 잘 기록해두는 것이 좋을 것 같아, 블로그를 시작해보려고 한다.
+대표적으로 사용되는 블로그 플랫폼을 찾았고, 그 중 Github Page를 사용해 보기로 했다. 
+페이지를 직접 만들어볼 수 있어서, 그 과정에서 GitHub도 자연스럽게 공부가 될 것 같다. 오늘 작업한 내용을 살펴 보면,
+<br /><br /></p>
+
+<ol>
+  <li><strong>Git repository 만들고, 로컬에 복사하기</strong>
+    <ul>
+      <li>Git
+        <ul>
+          <li><a href="https://docs.github.com/ko/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">GitHub repository 복사</a></li>
+          <li><a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
+        </ul>
+      </li>
+      <li>Brew
+        <ul>
+          <li>오픈 소스 패키지 관리 시스템, macOS 운영 체제의 소프트웨어 설치를 단순하게 만들어준다.</li>
+        </ul>
+      </li>
+      <li>Ruby
+        <ul>
+          <li>오픈 소스 프로그래밍 언어, 프로그래머의 단짝 친구</li>
+          <li><a href="https://jekyllrb-ko.github.io/docs/ruby-101/" target="_blank">루비 기초</a></li>
+          <li><a href="https://www.ruby-lang.org/ko/" target="_blank">Ruby</a><br />
+<br /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>jekyll admin page 만들기(CMS)</strong>
+    <ul>
+      <li>Gem
+        <ul>
+          <li>루비 프로젝트를 JSON으로 변환</li>
+          <li>페이지 나누기, GitHub API 연동</li>
+        </ul>
+      </li>
+      <li>Gemfile
+        <ul>
+          <li>Gem 파일 목록</li>
+        </ul>
+      </li>
+      <li>Bundler
+        <ul>
+          <li>Gemfile에 있는 젬들 설치</li>
+        </ul>
+      </li>
+      <li>Liquid
+        <ul>
+          <li>(오브젝트, 태그, 필터)</li>
+        </ul>
+      </li>
+      <li>상단에 루비 기초 참고
+<br /><br /></li>
+    </ul>
+  </li>
+  <li><strong>jekyll minima theme 적용하고, 홈화면 레이아웃 커스터 마이징</strong><br />
+    <ul>
+      <li>Minima 설치 경로 확인
+        <blockquote>
+          <p>bundle show minima</p>
+        </blockquote>
+      </li>
+      <li>로컬에 디렉토리 생성
+        <blockquote>
+          <p>mkdir -p ./_layouts</p>
+        </blockquote>
+      </li>
+      <li>home.html 파일 복사
+        <blockquote>
+          <p>cp Minima 경로/_layouts/home.html ./_layouts/
+<br /><br /></p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li><strong>마크다운 기본 문법 찾아보기</strong>
+<br /><br /></li>
+  <li>
+    <p><strong>첫 포스트 올리기</strong> <br /></p>
+
+    <ul>
+      <li>터미널 입력 관련
+        <blockquote>
+          <p>git add .  <br />
+git commit -m “message”  <br />
+git push  <br />
+bundler exec jekyll serve   <br />
+⌃c</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /><br /><br />
+이렇게 만들고나니 jekyll의 기본 테마인 minima도 깔끔한 것 같다. 앞으로 사용하면서 필요한 것들 위주로 맞춰나가면 좋을 것 같다.
+<br /><br /><br />
+etc.</p>
+<ul>
+    <li>처음엔 jekyll을 제키-투로 읽었다. 지킬로 읽는 듯 하다.</li>
+    <li>Brew / Ruby / GitHub / Jekyll 를 좀 더 알아보면 좋을 것 같다.</li>
+    <li>디렉토리 관리 및 파악 중요</li>
+    <li>버전 관리 및 파악 중요</li>
+</ul>
+<p><br />
+Next To Do</p>
+<ul>
+<li>Default 폰트 세팅 확인</li>
+<li>모바일 버전 레이아웃 확인</li>
+<li>메뉴 카테고리 추가</li>
+<li>파비콘, OG 이미지 추가</li>
+</ul>
+
+<p><br /><br /></p>
+<hr style="border-width:0.5px" />
+
+<p><br />
+:: 참고  <br />
+<a href="https://pages.github.com/" target="_blank">GitHub Pages</a><br />
+<a href="https://jekyllrb-ko.github.io/docs/" target="_blank">Jekyll Docs</a>   <br />
+<a href="https://talk.jekyllrb.com/" target="_blank">Jekyll Talk</a>   <br />
+<a href="https://labs.brandi.co.kr/2018/05/14/chunbs.html" target="_blank">jekyll을 이용한 Github 블로그 만들기(추천)</a>  <br />
+<a href="https://martinkang.github.io/develop/2022/03/26/blog-base-html-layout.html" target="_blank">코딩 독학</a>    <br />
+<a href="https://gist.github.com/ihoneymon/652be052a0727ad59601" target="_black">마크다운(Markdown 사용법)</a></p>
+
+
+  </div><a class="u-url" href="/jekyll/update/2023/03/15/first-post.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">SP</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">-->
+              <!-- SP --></li><li><a class="u-email" href="mailto:oe3d9b@gmail.com">oe3d9b@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>SeokPyo-Hong is graphic designer based in seoul. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
