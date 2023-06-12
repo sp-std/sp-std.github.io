@@ -430,7 +430,7 @@ table td {
 @media screen and (max-width: 800px) {
   table {
     display: block;
-    overflow-x: auto;
+    overflow-x: visible;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }

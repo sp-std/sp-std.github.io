@@ -274,7 +274,7 @@ table {
 
   @include media-query($on-laptop) {
     display: block;
-    overflow-x: auto;
+    overflow-x: visible;
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }

@@ -3,22 +3,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>[프로그래머스] 겹치는 선분의 길이 | Hong Seok Pyo</title>
+<title>[프로그래머스] 크레인 인형뽑기 | Hong Seok Pyo</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="[프로그래머스] 겹치는 선분의 길이" />
+<meta property="og:title" content="[프로그래머스] 크레인 인형뽑기" />
 <meta name="author" content="Hong Seok Pyo" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이" />
 <meta property="og:description" content="프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이" />
-<link rel="canonical" href="http://localhost:4000/jekyll/update/2023/05/27/pratice-2.html" />
-<meta property="og:url" content="http://localhost:4000/jekyll/update/2023/05/27/pratice-2.html" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2023/06/12/crain.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2023/06/12/crain.html" />
 <meta property="og:site_name" content="Hong Seok Pyo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-05-27T20:29:14+09:00" />
+<meta property="article:published_time" content="2023-06-12T11:09:22+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="[프로그래머스] 겹치는 선분의 길이" />
+<meta property="twitter:title" content="[프로그래머스] 크레인 인형뽑기" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hong Seok Pyo"},"dateModified":"2023-05-27T20:29:14+09:00","datePublished":"2023-05-27T20:29:14+09:00","description":"프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이","headline":"[프로그래머스] 겹치는 선분의 길이","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2023/05/27/pratice-2.html"},"url":"http://localhost:4000/jekyll/update/2023/05/27/pratice-2.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hong Seok Pyo"},"dateModified":"2023-06-12T11:09:22+09:00","datePublished":"2023-06-12T11:09:22+09:00","description":"프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이","headline":"[프로그래머스] 크레인 인형뽑기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2023/06/12/crain.html"},"url":"http://localhost:4000/jekyll/update/2023/06/12/crain.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hong Seok Pyo" />
 </head>
@@ -42,9 +42,9 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">[프로그래머스] 겹치는 선분의 길이</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2023-05-27T20:29:14+09:00" itemprop="datePublished">
-        May 27, 2023
+    <h1 class="post-title p-name" itemprop="name headline">[프로그래머스] 크레인 인형뽑기</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-06-12T11:09:22+09:00" itemprop="datePublished">
+        Jun 12, 2023
       </time></p>
   </header>
 
@@ -53,14 +53,7 @@
 <br /></p>
 
 <p><strong>문제</strong><br />
-선분 3개가 평행하게 놓여 있습니다. 세 선분의 시작과 끝 좌표가 [[start, end], [start, end], [start, end]] 형태로 들어있는 2차원 배열 lines가 매개변수로 주어질 때, 두 개 이상의 선분이 겹치는 부분의 길이를 return 하도록 solution 함수를 완성해보세요.</p>
-
-<p>lines가 [[0, 2], [-3, -1], [-2, 1]]일 때 그림으로 나타내면 다음과 같습니다.</p>
-
-<p><br /></p>
-
-<p><img src="https://github.com/sp-std/sp-std.github.io/blob/main/images/line.png?raw=true" alt="img" />
-<!-- <img src="/images/line.png"> --></p>
+게임 화면의 격자의 상태가 담긴 2차원 배열 board와 인형을 집기 위해 크레인을 작동시킨 위치가 담긴 배열 moves가 매개변수로 주어질 때, 크레인을 모두 작동시킨 후 터트려져 사라진 인형의 개수를 return 하도록 solution 함수를 완성해주세요.</p>
 
 <p><br />
 <strong>제한사항</strong></p>
@@ -79,21 +72,15 @@
   <thead>
     <tr>
       <th>lines</th>
+      <th>moves</th>
       <th>results</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>[[0, 1], [2, 5], [3, 9]]</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>[[-1, 1], [1, 3], [3, 9]]</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>[[0, 5], [3, 9], [1, 10]]</td>
-      <td>8</td>
+      <td>[[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]]</td>
+      <td>[1,5,3,5,1,2,1,4]</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
@@ -101,46 +88,36 @@
 <p><br />
 <strong>풀이</strong>
 <br /></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def solution(lines):
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def solution(board, moves):
     answer = 0
-    start1, end1 = lines[0][0], lines[0][1]
-    start2, end2 = lines[1][0], lines[1][1]
-    start3, end3 = lines[2][0], lines[2][1]
-    m_sta = min(start1, start2, start3)
-    m_end = max(end1, end2, end3)
-    over_1 = []
-    over_2 = []
-    over_3 = []
-    result = []
+    basket = []
+    z_li = zip(*board)
+    modi_z = [list(z) for z in z_li]
     
-    for i in range(m_sta, m_end+1):
-        if start1 &lt;= i &lt;= end1 and start2 &lt;= i &lt;= end2:
-            over_1.append(i)
-    
-        if start2 &lt;= i &lt;= end2 and start3 &lt;= i &lt;= end3:
-            over_2.append(i)
-            
-        if start1 &lt;= i &lt;= end1 and start3 &lt;= i &lt;= end3:
-            over_3.append(i)
-    
-    merged = over_1 + over_2 + over_3
-    result2 = list(set(merged))
-    result2.sort()
-            
-    if len(over_1) + len(over_2) + len(over_3) == len(result2):
-        if over_1 != []:
-            answer += over_1[-1] - over_1[0]
-        if over_2 != []:
-            answer += over_2[-1] - over_2[0]
-        if over_3 != [] :
-            answer += over_3[-1] - over_3[0]
-    else:
-        answer = result2[-1] - result2[0]
+    for m in moves:
+        for i, value in enumerate(modi_z[m-1]):
+            if value != 0:
+                basket.append(value)
+                modi_z[m-1][i] = 0
+                break
 
+    count = 0
+    while True:
+        found = False
+        for i in range(len(basket) - 1):
+            if basket[i] == basket[i+1]:
+                basket.pop(i)
+                basket.pop(i)
+                count += 2
+                found = True
+                break
+        if not found:
+            break
+    answer = count
     return answer
 </code></pre></div></div>
 
-  </div><a class="u-url" href="/jekyll/update/2023/05/27/pratice-2.html" hidden></a>
+  </div><a class="u-url" href="/jekyll/update/2023/06/12/crain.html" hidden></a>
 </article>
 
       </div>

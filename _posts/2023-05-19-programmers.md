@@ -1,5 +1,5 @@
 ---
-title: 프로그래머스 문제 & 파이썬 메모
+title: 파이썬 문법 메모
 layout: post
 date: '2023-05-19 16:52:42 +0900'
 categories:
