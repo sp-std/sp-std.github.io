@@ -1,5 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-12T11:14:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong Seok Pyo</title><subtitle>keep it simple.
-</subtitle><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><entry><title type="html">[프로그래머스] 크레인 인형뽑기</title><link href="http://localhost:4000/jekyll/update/2023/06/12/crain.html" rel="alternate" type="text/html" title="[프로그래머스] 크레인 인형뽑기" /><published>2023-06-12T11:09:22+09:00</published><updated>2023-06-12T11:09:22+09:00</updated><id>http://localhost:4000/jekyll/update/2023/06/12/crain</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/06/12/crain.html"><![CDATA[<p>프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-12T16:18:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hong Seok Pyo</title><subtitle>keep it simple.
+</subtitle><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><entry><title type="html">[프로그래머스] 옹알이(2)</title><link href="http://localhost:4000/2023/06/12/2.html" rel="alternate" type="text/html" title="[프로그래머스] 옹알이(2)" /><published>2023-06-12T16:16:35+09:00</published><updated>2023-06-12T16:16:35+09:00</updated><id>http://localhost:4000/2023/06/12/2</id><content type="html" xml:base="http://localhost:4000/2023/06/12/2.html"><![CDATA[<p>프로그래머스 - 코딩테스트 연습 - 옹알이(2)
+<br /></p>
+
+<p><strong>문제</strong><br />
+머쓱이는 태어난 지 11개월 된 조카를 돌보고 있습니다. 조카는 아직 “aya”, “ye”, “woo”, “ma” 네 가지 발음과 네 가지 발음을 조합해서 만들 수 있는 발음밖에 하지 못하고 연속해서 같은 발음을 하는 것을 어려워합니다. 문자열 배열 babbling이 매개변수로 주어질 때, 머쓱이의 조카가 발음할 수 있는 단어의 개수를 return하도록 solution 함수를 완성해주세요.</p>
+
+<p><br />
+<strong>제한사항</strong>
+1 ≤ babbling의 길이 ≤ 100
+1 ≤ babbling[i]의 길이 ≤ 30
+문자열은 알파벳 소문자로만 이루어져 있습니다.
+<br /><br /></p>
+
+<p><strong>입출력 예</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>babbling</th>
+      <th>results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[“aya”, “yee”, “u”, “maa”]</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>[“ayaye”, “uuu”, “yeye”, “yemawoo”, “ayaayaa”]</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+<strong>풀이</strong>
+<br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def solution(babbling):
+    answer = 0
+    speak = ['aya', 'ye', 'woo', 'ma']
+    
+    for i in range(len(babbling)):
+        for s in speak:
+            if s in babbling[i] and s*2 not in babbling[i]:
+                babbling[i] = babbling[i].replace(s, '0')
+            
+    answer = [w for w in babbling if all(c == '0' for c in w)]
+            
+    return len(answer)
+</code></pre></div></div>
+
+<ul>
+  <li>옹알이(1)과 같은 거의 유사한 풀이방식</li>
+  <li>작은 실수 유의!</li>
+</ul>
+
+<p><br />
+<strong>다른 사람 풀이</strong>
+<br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def solution(babbling):
+    answer = 0
+    speak = ["aya", "ye", "woo", "ma"]
+    for i in babbling:
+        for v in speak:
+            if v*2 not in i:
+                i = i.replace(v,' ')
+        if i.strip() == '':
+            answer += 1
+    return answer
+</code></pre></div></div>]]></content><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><summary type="html"><![CDATA[프로그래머스 - 코딩테스트 연습 - 옹알이(2)]]></summary></entry><entry><title type="html">[프로그래머스] 크레인 인형뽑기</title><link href="http://localhost:4000/jekyll/update/2023/06/12/crain.html" rel="alternate" type="text/html" title="[프로그래머스] 크레인 인형뽑기" /><published>2023-06-12T11:09:22+09:00</published><updated>2023-06-12T11:09:22+09:00</updated><id>http://localhost:4000/jekyll/update/2023/06/12/crain</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/06/12/crain.html"><![CDATA[<p>프로그래머스 - 코딩테스트 연습 - 겹치는 선분의 길이
 <br /></p>
 
 <p><strong>문제</strong><br />
@@ -268,10 +337,10 @@
     
     for i in babbling:
         for j in words:
-            i = i.replace(j, 'x')   
+            i = i.replace(j, ' ')   
         my_list.append(i)
 
-    answer = [word for word in my_list if all(cha == 'x' for cha in word)] 
+    answer = [word for word in my_list if all(cha == ' ' for cha in word)] 
     
     return len(answer)
 </code></pre></div></div>
@@ -610,41 +679,4 @@ diction = {key:value for key, value in some_iter if some_condition}
 <p>하지만 자바스크립트에서는 인터페이스를 명시적으로 선언하지 않고, 클래스의 메서드를 직접 호출하거나 객체의 프로퍼티에 접근하는 것이 일반적입니다. 따라서 자바스크립트에서는 파이썬처럼 명시적으로 추상화 인터페이스를 정의하는 것은 일반적이지 않습니다.</p>
 
 <p><code class="language-plaintext highlighter-rouge">프로그래밍 초심자 입장에서는 공부하는데 도움이 될 것 같다.</code><br />
-<code class="language-plaintext highlighter-rouge">하지만 정확한 정보인지는 계속해서 체크해야 할 듯..</code></p>]]></content><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[컴프리헨션은 리스트, 딕셔너리, 집합 등의 컬렉션을 생성하기 위한 파이썬의 문법. comprehension은 포함이라는 뜻을 가지고 있다. 컴프리헨션을 사용하면 반복문과 조건문을 결합하여 간결한 코드로 만들 수 있다.]]></summary></entry><entry><title type="html">Github page 관련 메모</title><link href="http://localhost:4000/jekyll/update/2023/04/29/post.html" rel="alternate" type="text/html" title="Github page 관련 메모" /><published>2023-04-29T13:41:34+09:00</published><updated>2023-04-29T13:41:34+09:00</updated><id>http://localhost:4000/jekyll/update/2023/04/29/post</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/04/29/post.html"><![CDATA[<ol>
-  <li>rbenv 이용하여 Ruby 설치
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ brew install rbenv
-</code></pre></div>    </div>
-  </li>
-  <li>Ruby 버전 설치
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rbenv install 0.0.0 # 원하는 Ruby 버전 설치
-$ rbenv rehash        # Ruby 설치 후 재실행 
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>환경 설정 명령어 추가(내용 확인 필요)</p>
-  </li>
-  <li>Ruby 버전 변경
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rbenv global 0.0.0
-$ rbenv local 0.0.0
-</code></pre></div>    </div>
-  </li>
-  <li>적용된 Ruby 버전 확인
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rbenv versions
-</code></pre></div>    </div>
-  </li>
-  <li>Ruby 버전 삭제/설치
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rbenv uninstall 0.0.0
-$ rbenv install 0.0.0
-</code></pre></div>    </div>
-  </li>
-  <li>rbenv 설치 확인
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv versions
-</code></pre></div>    </div>
-  </li>
-  <li>설치 가능한 Ruby 버전 확인
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv install -l
-</code></pre></div>    </div>
-  </li>
-  <li>그 외 확인해 볼 것
-rbenv PATH / 쉘 설정 파일 / git 관련 내용 복습 필요</li>
-</ol>]]></content><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[rbenv 이용하여 Ruby 설치 $ brew install rbenv Ruby 버전 설치 $ rbenv install 0.0.0 # 원하는 Ruby 버전 설치 $ rbenv rehash # Ruby 설치 후 재실행 환경 설정 명령어 추가(내용 확인 필요)]]></summary></entry></feed>
+<code class="language-plaintext highlighter-rouge">하지만 정확한 정보인지는 계속해서 체크해야 할 듯..</code></p>]]></content><author><name>Hong Seok Pyo</name><email>seokpyo1110@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[컴프리헨션은 리스트, 딕셔너리, 집합 등의 컬렉션을 생성하기 위한 파이썬의 문법. comprehension은 포함이라는 뜻을 가지고 있다. 컴프리헨션을 사용하면 반복문과 조건문을 결합하여 간결한 코드로 만들 수 있다.]]></summary></entry></feed>
