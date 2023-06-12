@@ -14,4 +14,4 @@ categories: jekyll update
 * 스스로 성취감을 느끼고 동기부여 하는 것
 * 기본기와 반복, 그리고 연구
 
-![img](http://)
+![img](https://whitney.org/collection/works/22136)
